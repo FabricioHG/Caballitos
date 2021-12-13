@@ -1,0 +1,1 @@
+window.drupalTranslations = {"strings":{"":{"Please wait...":"Espere, por favor...","Changed":"Modificado"}},"pluralFormula":{"1":0,"default":1}};
