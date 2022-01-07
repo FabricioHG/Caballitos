@@ -128,7 +128,7 @@ class BannerBlock extends BlockBase {
 	    	'#type' => 'markup',
 			  '#markup' => $markup,
 			  '#cache' => array(
-				  'max-age' => 0,
+				  'max-age' => 4,
 				 ),
 			   '#attached' => array(
 				 'library' => array(

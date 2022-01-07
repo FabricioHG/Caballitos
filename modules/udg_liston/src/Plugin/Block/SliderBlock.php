@@ -178,7 +178,7 @@ class SliderBlock extends BlockBase {
 	    	'#type' => 'markup',
 				'#markup' => $markup,
 				'#cache' => array(
-					'max-age' => 0,
+					'max-age' => 3,
 					),
 				'#attached' => array(
 					'library' => array(
