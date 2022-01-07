@@ -1,0 +1,23 @@
+uuid: e7cd683e-22f0-4bfd-95c2-efed6fc04db5
+langcode: es
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - drudg8b3
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: drudg8b3_search
+theme: drudg8b3
+region: header
+weight: -10
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Buscar
+  label_display: visible
+  provider: search
+  page_id: ''
+visibility: {  }

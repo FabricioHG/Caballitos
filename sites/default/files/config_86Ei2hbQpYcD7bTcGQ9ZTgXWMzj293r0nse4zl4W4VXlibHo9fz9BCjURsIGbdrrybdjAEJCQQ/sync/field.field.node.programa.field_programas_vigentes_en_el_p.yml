@@ -1,0 +1,29 @@
+uuid: bee91af0-e2a0-4609-8db9-9a68ce28490b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_programas_vigentes_en_el_p
+    - node.type.programa
+    - taxonomy.vocabulary.pnpc
+id: node.programa.field_programas_vigentes_en_el_p
+field_name: field_programas_vigentes_en_el_p
+entity_type: node
+bundle: programa
+label: 'Programas Vigentes en el Programa Nacional de Posgrados de Calidad (PNPC)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pnpc: pnpc
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,17 @@
+uuid: 8910b84e-b32b-46a2-ad1e-b847fe2dbba7
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Programa
+type: programa
+description: 'Programa de Posgrados de la Universidad de Guadalajara'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,31 @@
+uuid: 8af0a0d4-9839-46da-8737-4e52d63fac10
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:20827923-96a3-4b4c-bbd9-22d5422b7c46'
+  module:
+    - block_content
+    - system
+  theme:
+    - drudg8b3
+id: galeriadevideos
+theme: drudg8b3
+region: content3
+weight: -10
+provider: null
+plugin: 'block_content:20827923-96a3-4b4c-bbd9-22d5422b7c46'
+settings:
+  id: 'block_content:20827923-96a3-4b4c-bbd9-22d5422b7c46'
+  label: 'Galería de Videos '
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

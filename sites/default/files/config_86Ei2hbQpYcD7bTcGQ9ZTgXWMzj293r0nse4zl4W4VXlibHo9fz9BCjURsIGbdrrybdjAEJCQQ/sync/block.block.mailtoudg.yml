@@ -1,0 +1,39 @@
+uuid: c303e2e5-600c-4e11-9cf1-a3ae75d26065
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+    - udg_liston
+  theme:
+    - drudg8b3
+id: mailtoudg
+theme: drudg8b3
+region: content
+weight: -9
+provider: null
+plugin: mailto_udg
+settings:
+  id: mailto_udg
+  label: 'Compartir en tus redes'
+  label_display: visible
+  provider: udg_liston
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      directorio: directorio
+      evento_de_agenda: evento_de_agenda
+      galeria_de_imagenes: galeria_de_imagenes
+      galeria_de_videos: galeria_de_videos
+      noticia: noticia
+      page: page
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '#'

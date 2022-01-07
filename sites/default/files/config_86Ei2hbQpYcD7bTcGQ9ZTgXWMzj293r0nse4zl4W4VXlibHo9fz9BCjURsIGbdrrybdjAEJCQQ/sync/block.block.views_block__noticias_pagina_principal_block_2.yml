@@ -1,0 +1,33 @@
+uuid: a8d3f2cf-4780-4a3f-9360-a4d5277e81aa
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.noticias_pagina_principal
+  module:
+    - ctools
+    - views
+  theme:
+    - drudg8b3
+id: views_block__noticias_pagina_principal_block_2
+theme: drudg8b3
+region: content
+weight: -13
+provider: null
+plugin: 'views_block:noticias_pagina_principal-block_2'
+settings:
+  id: 'views_block:noticias_pagina_principal-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      noticia: noticia

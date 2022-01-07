@@ -1,0 +1,24 @@
+uuid: ebf9f325-ec38-4e33-894f-8d795328ca8e
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.programa
+  module:
+    - user
+id: node.programa.teaser
+targetEntityType: node
+bundle: programa
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true

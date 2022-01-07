@@ -1,0 +1,25 @@
+uuid: 1a3f4748-b6cb-404d-92cf-29e9076bb1fe
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drudg8b3
+id: breadcrumbs
+theme: drudg8b3
+region: precontent3
+weight: -17
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: visible
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '<front>'

@@ -1,0 +1,29 @@
+uuid: 5c342610-1dd0-4f98-9e16-1eaa40e16265
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_area_disciplinar
+    - node.type.programa
+    - taxonomy.vocabulary.area_disciplinar
+id: node.programa.field_area_disciplinar
+field_name: field_area_disciplinar
+entity_type: node
+bundle: programa
+label: 'Área disciplinar'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      area_disciplinar: area_disciplinar
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 2dd587ea-cb1b-45c1-8857-80c2b42c78b4
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drudg8b3
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: drudg8b3_content
+theme: drudg8b3
+region: content
+weight: -10
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  label_display: '0'
+  provider: system
+visibility: {  }

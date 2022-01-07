@@ -1,0 +1,25 @@
+uuid: bacd7154-b866-4faa-a4ad-518144f8e55d
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:923c8f6e-8ecd-4f02-8d06-bf84048b1931'
+  module:
+    - block_content
+  theme:
+    - drudg8b3
+id: drudg8b3_footer1
+theme: drudg8b3
+region: footer
+weight: -17
+provider: null
+plugin: 'block_content:923c8f6e-8ecd-4f02-8d06-bf84048b1931'
+settings:
+  id: 'block_content:923c8f6e-8ecd-4f02-8d06-bf84048b1931'
+  label: 'Información del portal'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

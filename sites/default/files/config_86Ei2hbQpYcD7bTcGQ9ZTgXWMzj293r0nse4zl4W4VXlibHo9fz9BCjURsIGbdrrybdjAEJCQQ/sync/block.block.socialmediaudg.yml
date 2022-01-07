@@ -1,0 +1,26 @@
+uuid: 21d60b55-3a87-489c-bc50-140614f508bc
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+    - udg_liston
+  theme:
+    - drudg8b3
+id: socialmediaudg
+theme: drudg8b3
+region: content6
+weight: 0
+provider: null
+plugin: socialmedia_udg
+settings:
+  id: socialmedia_udg
+  label: 'Social Media UDG'
+  label_display: visible
+  provider: udg_liston
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

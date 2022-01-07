@@ -1,0 +1,37 @@
+uuid: 3a32cb50-6b54-46be-8c09-b89525b5fe4b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cartel
+  module:
+    - ctools
+    - fieldblock
+    - image
+  theme:
+    - drudg8b3
+id: contenidofield_4
+theme: drudg8b3
+region: content
+weight: -12
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Contenido field'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_cartel
+  formatter_id: image
+  formatter_settings:
+    image_link: file
+    image_style: cartel_de_agenda
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      evento_de_agenda: evento_de_agenda

@@ -1,0 +1,8 @@
+uuid: 8d57b9e5-e807-4776-a968-c192a699e97b
+langcode: es
+status: true
+dependencies: {  }
+name: Nivel
+vid: nivel
+description: 'Categorías de niveles de posgrado'
+weight: 0

@@ -1,0 +1,29 @@
+uuid: 740c2071-74c3-4b5c-bfc3-cb99818572d8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_modalidad
+    - node.type.programa
+    - taxonomy.vocabulary.modalidad
+id: node.programa.field_modalidad
+field_name: field_modalidad
+entity_type: node
+bundle: programa
+label: Modalidad
+description: 'Modalidad del Posgrado'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      modalidad: modalidad
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

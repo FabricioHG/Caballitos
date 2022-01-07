@@ -1,0 +1,20 @@
+uuid: edcb65d0-d69b-46ab-8dc7-809e1de8a09c
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_programas_vigentes_en_el_p
+field_name: field_programas_vigentes_en_el_p
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

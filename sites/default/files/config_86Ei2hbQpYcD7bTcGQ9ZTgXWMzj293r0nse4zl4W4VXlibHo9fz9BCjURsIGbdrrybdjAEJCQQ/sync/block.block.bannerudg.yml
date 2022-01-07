@@ -1,0 +1,30 @@
+uuid: c88c44c6-2863-4b48-9b25-2c3a093105bc
+langcode: es
+status: true
+dependencies:
+  module:
+    - udg_liston
+    - user
+  theme:
+    - drudg8b3
+id: bannerudg
+theme: drudg8b3
+region: content10
+weight: 0
+provider: null
+plugin: Banner_udg
+settings:
+  id: Banner_udg
+  label: 'Enlaces de interés'
+  label_display: '0'
+  provider: udg_liston
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      administrator: administrator

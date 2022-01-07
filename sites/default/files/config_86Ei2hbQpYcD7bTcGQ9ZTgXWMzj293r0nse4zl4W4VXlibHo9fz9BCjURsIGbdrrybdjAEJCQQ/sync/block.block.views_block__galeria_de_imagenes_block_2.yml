@@ -1,0 +1,30 @@
+uuid: ca7a7d03-0bf7-498e-87a6-ad138e1e281a
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.galeria_de_imagenes
+  module:
+    - system
+    - views
+  theme:
+    - drudg8b3
+id: views_block__galeria_de_imagenes_block_2
+theme: drudg8b3
+region: sidebar_second
+weight: -12
+provider: null
+plugin: 'views_block:galeria_de_imagenes-block_2'
+settings:
+  id: 'views_block:galeria_de_imagenes-block_2'
+  label: 'Últimas galerías de imágenes'
+  label_display: visible
+  provider: views
+  views_label: 'Últimas galerías de imágenes'
+  items_per_page: '5'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/galeria_de_imagenes/*'

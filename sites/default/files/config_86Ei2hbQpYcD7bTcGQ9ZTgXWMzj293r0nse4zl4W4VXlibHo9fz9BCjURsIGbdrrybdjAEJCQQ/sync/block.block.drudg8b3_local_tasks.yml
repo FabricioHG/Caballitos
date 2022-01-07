@@ -1,0 +1,22 @@
+uuid: 95a69478-9a53-47c1-a44e-2984bc88a588
+langcode: es
+status: true
+dependencies:
+  theme:
+    - drudg8b3
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: drudg8b3_local_tasks
+theme: drudg8b3
+region: content
+weight: -15
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }
