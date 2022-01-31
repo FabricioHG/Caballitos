@@ -16,10 +16,13 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "dompdf/dompdf": "^1.1",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-project-message": "^9.2",
         "drupal/core-recommended": "^9.2",
         "drupal/core-vendor-hardening": "^9.2",
+        "drupal/devel": "^4",
+        "drupal/easy_breadcrumb": "^2.0",
         "drupal/token": "^1.10",
         "drupal/webform": "^6.1",
         "drush/drush": "^10.6"
