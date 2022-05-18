@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: 'multimedia/galeria_de_imagenes/[node:title]'
 selection_criteria:
   054b3005-9d9a-4908-9707-94cf1182d679:
-    id: node_type
+    id: 'entity_bundle:node'
     negate: false
     uuid: 054b3005-9d9a-4908-9707-94cf1182d679
     context_mapping:

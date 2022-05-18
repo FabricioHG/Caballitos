@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: 'multimedia/galeria_de_videos/[node:title]'
 selection_criteria:
   edfc06db-ffa4-4447-8285-b59da9427a06:
-    id: node_type
+    id: 'entity_bundle:node'
     negate: false
     uuid: edfc06db-ffa4-4447-8285-b59da9427a06
     context_mapping:

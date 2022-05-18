@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: 'evento/[node:title]'
 selection_criteria:
   920f1c05-6726-4593-929b-40564f3ebceb:
-    id: node_type
+    id: 'entity_bundle:node'
     negate: false
     uuid: 920f1c05-6726-4593-929b-40564f3ebceb
     context_mapping:
