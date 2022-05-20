@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '674a8efe0318e982d296f98f7f9b1e414b40bbb5',
+    'reference' => 'd9067d197377bb34db887299f14c03f142167cd7',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -787,7 +787,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '674a8efe0318e982d296f98f7f9b1e414b40bbb5',
+      'reference' => 'd9067d197377bb34db887299f14c03f142167cd7',
     ),
     'drupal/link' => 
     array (
@@ -908,6 +908,15 @@
         0 => '9.3.13',
       ),
     ),
+    'drupal/phpmailer_smtp' => 
+    array (
+      'pretty_version' => '2.0.4',
+      'version' => '2.0.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2.0.4',
+    ),
     'drupal/quickedit' => 
     array (
       'replaced' => 
@@ -970,6 +979,15 @@
       array (
         0 => '9.3.13',
       ),
+    ),
+    'drupal/smtp' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0',
     ),
     'drupal/standard' => 
     array (
@@ -1303,6 +1321,15 @@
       array (
       ),
       'reference' => '4498b5df7b08e8469f0f8279651ea5de9626ed02',
+    ),
+    'phpmailer/phpmailer' => 
+    array (
+      'pretty_version' => 'v6.6.0',
+      'version' => '6.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e43bac82edc26ca04b36143a48bde1c051cfd5b1',
     ),
     'psr/cache' => 
     array (

@@ -51,3 +51,4 @@ cdn_provider: custom
 breadcrumb_home: 1
 cdn_cache_ttl_assets: -1
 cdn_cache_ttl_library: -1
+langcode: es
