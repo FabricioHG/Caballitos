@@ -8,6 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Mail\MailManagerInterface;
+use Drupal\phpmailer_smtp\PluginManager\PhpmailerOauth2PluginManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -37,6 +38,13 @@ class SettingsForm extends ConfigFormBase {
   protected $moduleHandler;
 
   /**
+   * The PHPMailer OAuth2 plugin manager.
+   *
+   * @var \Drupal\phpmailer_smtp\PluginManager\PhpmailerOauth2PluginManagerInterface
+   */
+  protected $phpmailerOauth2PluginManager;
+
+  /**
    * Constructor.
    *
    * @param \Drupal\Core\Mail\MailManagerInterface $mail_manager
@@ -45,11 +53,14 @@ class SettingsForm extends ConfigFormBase {
    *   The language manager.
    * @param \Drupal\Core\Extension\ModuleHandlerInterface $module_handler
    *   The module handler.
+   * @param \Drupal\phpmailer_smtp\PluginManager\PhpmailerOauth2PluginManagerInterface $plugin_manager
+   *   The PHPMMailer OAuth2 plugin manager.
    */
-  public function __construct(MailManagerInterface $mail_manager, LanguageManagerInterface $language_manager, ModuleHandlerInterface $module_handler) {
+  public function __construct(MailManagerInterface $mail_manager, LanguageManagerInterface $language_manager, ModuleHandlerInterface $module_handler, PhpmailerOauth2PluginManagerInterface $plugin_manager) {
     $this->mailManager = $mail_manager;
     $this->languageManager = $language_manager;
     $this->moduleHandler = $module_handler;
+    $this->phpmailerOauth2PluginManager = $plugin_manager;
   }
 
   /**
@@ -59,7 +70,8 @@ class SettingsForm extends ConfigFormBase {
     return new static(
       $container->get('plugin.manager.mail'),
       $container->get('language_manager'),
-      $container->get('module_handler')
+      $container->get('module_handler'),
+      $container->get('plugin.manager.phpmailer_oauth2')
     );
   }
 
@@ -124,12 +136,36 @@ class SettingsForm extends ConfigFormBase {
       $config->set('smtp_protocol', '')->save();
     }
 
+    $auth_type_options = [
+      'basic_auth' => $this->t('Basic Authentication'),
+    ];
+
+    $oauth2plugins = $this->phpmailerOauth2PluginManager->getDefinitions();
+    if (is_array($oauth2plugins)) {
+      foreach ($oauth2plugins as $id => $plugin) {
+        $auth_type_options[$id] = $plugin['name']->__toString();
+      }
+    }
+
+    $form['smtp_authentication_type'] = [
+      '#type' => 'select',
+      '#title' => $this->t('SMTP authentication type'),
+      '#options' => $auth_type_options,
+      '#default_value' => $config->get('smtp_authentication_type'),
+      '#description' => $this->t("Select SMTP authentication method."),
+    ];
+
     $form['auth'] = [
       '#type' => 'details',
       '#title' => $this->t('SMTP authentication'),
       '#description' => $this->t('Leave both fields empty, if your SMTP server does not require authentication.'),
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
+      '#states' => [
+        'visible' => [
+          'select[name="smtp_authentication_type"]' => ['value' => 'basic_auth'],
+        ],
+      ],
     ];
     $form['auth']['smtp_username'] = [
       '#type' => 'textfield',
@@ -323,6 +359,7 @@ class SettingsForm extends ConfigFormBase {
       ->set('smtp_ssl_verify_peer_name', $values['smtp_ssl_verify_peer_name'])
       ->set('smtp_ssl_allow_self_signed', $values['smtp_ssl_allow_self_signed'])
       ->set('smtp_username', $values['smtp_username'])
+      ->set('smtp_authentication_type', $values['smtp_authentication_type'])
       ->set('smtp_fromname', $values['smtp_fromname'])
       ->set('smtp_ehlo_host', $values['smtp_ehlo_host'])
       ->set('smtp_always_replyto', $values['smtp_always_replyto'])

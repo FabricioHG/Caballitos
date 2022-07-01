@@ -92,3 +92,21 @@ Port 465 is now encouraged: https://tools.ietf.org/html/rfc8314
       = 'your_debug_email@yoursite.com';
 
   This will change the recipient of all e-mails to the configured address.
+
+OAUTH2
+------
+
+Version 2.1.x supports a very basic plugin structure for OAuth2 authentication.
+
+To implement, extend `src/Plugin/PHPMailerOAuth2PluginBase`. 
+
+The method `getAuthOptions()` must return an array of options which PHPMailer expects, including
+the provider.  See `__construct()` in [PHPMailer's OAuth2 class](https://github.com/PHPMailer/PHPMailer/blob/master/src/OAuth.php).
+
+The provider is an instance of the [League OAuth Client Provider](https://oauth2-client.thephpleague.com/).
+
+**Example Oauth2 Provider**
+
+The [PHPMailer OAuth2](https://www.drupal.org/project/phpmailer_oauth2) module provides a plugin to authenticate with Azure using the client [Azure Active Directory Provider for OAuth 2.0 Client](https://github.com/theNetworg/oauth2-azure).
+
+

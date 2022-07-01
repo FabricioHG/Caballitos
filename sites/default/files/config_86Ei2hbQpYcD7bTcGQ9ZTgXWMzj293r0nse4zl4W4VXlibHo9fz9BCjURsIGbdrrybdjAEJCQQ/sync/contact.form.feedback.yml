@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Comentarios sobre el sitio web'
 recipients:
-  - ogas.gustavo@gmail.com
+  - fabriciofranciscohernandezgome@gmail.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

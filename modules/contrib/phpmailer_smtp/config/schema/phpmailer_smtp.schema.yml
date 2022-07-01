@@ -22,7 +22,10 @@ phpmailer_smtp.settings:
       label: 'SMTP password'
     smtp_hide_password:
       type: boolean
-      label: 'Hide password'    
+      label: 'Hide password'
+    smtp_authentication_type:
+      type: string
+      label: 'SMTP authentication type'
     smtp_fromname:
       type: string
       label: 'From name'

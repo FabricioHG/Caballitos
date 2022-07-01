@@ -11,9 +11,11 @@ use Drupal\Core\Mail\MailInterface;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\phpmailer_smtp\PluginManager\PhpmailerOauth2PluginManagerInterface;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use PHPMailer\PHPMailer\OAuth;
 
 /**
  * Implements the base PHPMailer SMTP class for the Drupal MailInterface.
@@ -101,6 +103,13 @@ class PhpMailerSmtp extends PHPMailer implements MailInterface, ContainerFactory
   protected $messenger;
 
   /**
+   * The PHPMailer OAuth2 plugin manager.
+   *
+   * @var \Drupal\phpmailer_smtp\PluginManager\PhpmailerOauth2PluginManagerInterface
+   */
+  protected $phpmailerOauth2PluginManager;
+
+  /**
    * Creates an instance of the plugin.
    *
    * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
@@ -119,14 +128,15 @@ class PhpMailerSmtp extends PHPMailer implements MailInterface, ContainerFactory
     return new static(
       $container->get('config.factory'),
       $container->get('logger.factory'),
-      $container->get('messenger')
+      $container->get('messenger'),
+      $container->get('plugin.manager.phpmailer_oauth2')
     );
   }
 
   /**
    * Constructor.
    */
-  public function __construct(ConfigFactoryInterface $config, LoggerChannelFactoryInterface $logger_factory, MessengerInterface $messenger) {
+  public function __construct(ConfigFactoryInterface $config, LoggerChannelFactoryInterface $logger_factory, MessengerInterface $messenger, PhpmailerOauth2PluginManagerInterface $plugin_manager) {
     // Throw exceptions instead of dying (since 5.0.0).
     if (method_exists(get_parent_class($this), '__construct')) {
       parent::__construct(TRUE);
@@ -136,6 +146,7 @@ class PhpMailerSmtp extends PHPMailer implements MailInterface, ContainerFactory
     $this->config = $config->get('phpmailer_smtp.settings');
     $this->loggerFactory = $logger_factory;
     $this->messenger = $messenger;
+    $this->phpmailerOauth2PluginManager = $plugin_manager;
 
     $this->IsSMTP();
     $this->Reset();
@@ -158,10 +169,22 @@ class PhpMailerSmtp extends PHPMailer implements MailInterface, ContainerFactory
       $this->SMTPOptions['ssl']['allow_self_signed'] = isset($ssl_allow_self_signed) ? $ssl_allow_self_signed : 0;
     }
 
-    // Use SMTP authentication if both username and password are given.
-    $this->Username = $this->config->get('smtp_username', '');
-    $this->Password = $this->config->get('smtp_password', '');
-    $this->SMTPAuth = (bool) ($this->Username != '' && $this->Password != '');
+    // Check for basic authentication.
+    if ($this->config->get('smtp_authentication_type') === 'basic_auth') {
+      // Use SMTP authentication if both username and password are given.
+      $this->Username = $this->config->get('smtp_username', '');
+      $this->Password = $this->config->get('smtp_password', '');
+      $this->SMTPAuth = (bool) ($this->Username != '' && $this->Password != '');
+    }
+    // If not basic auth, check for OAuth2 plugins.
+    else {
+      $oauth2plugin = $this->phpmailerOauth2PluginManager->createInstance($this->config->get('smtp_authentication_type'));
+      $oauth_options = $oauth2plugin->getAuthOptions();
+      $oauth = new OAuth($oauth_options);
+      $this->setOAuth($oauth);
+      $this->AuthType = 'XOAUTH2';
+      $this->SMTPAuth = TRUE;
+    }
 
     $this->SMTPKeepAlive = $this->config->get('smtp_keepalive', 0);
 
@@ -344,7 +367,7 @@ class PhpMailerSmtp extends PHPMailer implements MailInterface, ContainerFactory
       unset($message['headers']);
 
       // Parse 'From' address.
-      $from = $this->parseAddresses($headers['from'], true, self::CHARSET_UTF8);
+      $from = $this->parseAddresses($headers['from'], TRUE, self::CHARSET_UTF8);
       $from = reset($from);
       $this->From = $from['address'];
 

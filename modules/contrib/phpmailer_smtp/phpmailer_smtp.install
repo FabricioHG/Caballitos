@@ -54,3 +54,12 @@ function phpmailer_smtp_update_8001() {
     ->set('smtp_timeout', 30)
     ->save(TRUE);
 }
+
+/**
+ * Add Authentication type setting.
+ */
+function phpmailer_smtp_update_8002() {
+  \Drupal::configFactory()->getEditable('phpmailer_smtp.settings')
+    ->set('smtp_authentication_type', 'basic_auth')
+    ->save(TRUE);
+}
