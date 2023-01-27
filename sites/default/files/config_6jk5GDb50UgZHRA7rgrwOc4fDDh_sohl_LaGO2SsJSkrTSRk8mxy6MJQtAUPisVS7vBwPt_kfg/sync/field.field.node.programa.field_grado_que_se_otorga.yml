@@ -1,0 +1,19 @@
+uuid: 4a5ee9d2-ee2c-4fb9-aa40-1e12c10977d2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grado_que_se_otorga
+    - node.type.programa
+id: node.programa.field_grado_que_se_otorga
+field_name: field_grado_que_se_otorga
+entity_type: node
+bundle: programa
+label: 'Grado que se otorga'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

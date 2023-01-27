@@ -1,0 +1,25 @@
+uuid: 9457056d-b15d-4184-a2db-9597636ec666
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - drudg8b3
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: drudg8b3_branding
+theme: drudg8b3
+region: precontent
+weight: -20
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del sitio'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

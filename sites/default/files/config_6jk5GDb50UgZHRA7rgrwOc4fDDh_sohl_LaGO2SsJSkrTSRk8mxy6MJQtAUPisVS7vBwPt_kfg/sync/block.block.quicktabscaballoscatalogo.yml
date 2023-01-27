@@ -1,0 +1,25 @@
+uuid: 571d8b51-9e4a-47a2-8fd9-1de855dbe583
+langcode: es
+status: true
+dependencies:
+  module:
+    - quicktabs
+    - system
+  theme:
+    - drudg8b3
+id: quicktabscaballoscatalogo
+theme: drudg8b3
+region: content
+weight: 0
+provider: null
+plugin: 'quicktabs_block:caballos_catalogo'
+settings:
+  id: 'quicktabs_block:caballos_catalogo'
+  label: Catálogo
+  label_display: visible
+  provider: quicktabs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /catalogo

@@ -10,7 +10,7 @@ regions:
   liston: 'Liston'  
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
-  header: 'Top Bar'
+  # header: 'Top Bar'
   precontent: 'Title'
   precontent2: 'Pre content'
   slideshow: 'Slideshow'

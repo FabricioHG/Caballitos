@@ -1,0 +1,30 @@
+uuid: 6a39793d-2655-4e91-8ab4-4114cd2bc732
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.videos
+  module:
+    - system
+    - views
+  theme:
+    - drudg8b3
+id: drudg8b3_views_block__videos_block_2
+theme: drudg8b3
+region: content
+weight: -12
+provider: null
+plugin: 'views_block:videos-block_2'
+settings:
+  id: 'views_block:videos-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

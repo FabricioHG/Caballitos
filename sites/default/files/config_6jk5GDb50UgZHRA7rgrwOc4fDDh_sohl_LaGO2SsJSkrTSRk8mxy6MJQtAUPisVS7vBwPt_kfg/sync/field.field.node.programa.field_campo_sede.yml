@@ -1,0 +1,29 @@
+uuid: cb55bc13-b129-492f-99c6-fcaf0c8cf8e1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campo_sede
+    - node.type.programa
+    - taxonomy.vocabulary.centro_sede
+id: node.programa.field_campo_sede
+field_name: field_campo_sede
+entity_type: node
+bundle: programa
+label: 'Campo Sede'
+description: 'Sede Universitario '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      centro_sede: centro_sede
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

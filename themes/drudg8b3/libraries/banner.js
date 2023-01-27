@@ -31,5 +31,28 @@ $('#playButtonbanner').addClass('not-show');
     $('#playButtonbanner').removeClass('not-show');
   });
 
+  $( ".carousel-col" ).each(function(){
+    $(this).on('mouseenter',function(){
+      $(this).children(".cont_rojo").fadeIn();
+    });
+  });
+  $( ".carousel-col" ).each(function(){
+    $(this).on('mouseleave',function(){
+      $(this).children(".cont_rojo").fadeOut();
+    });
+  });
+
 
   }(jQuery));
+
+
+
+
+
+
+
+
+
+
+
+

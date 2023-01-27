@@ -1,0 +1,30 @@
+uuid: 94767b80-4325-4b26-b7a3-ec4049a86b88
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b83fee1c-954c-46b9-aaf9-acbf02e938d8'
+  module:
+    - block_content
+    - system
+  theme:
+    - drudg8b3
+id: serviciobloque2
+theme: drudg8b3
+region: content4
+weight: -20
+provider: null
+plugin: 'block_content:b83fee1c-954c-46b9-aaf9-acbf02e938d8'
+settings:
+  id: 'block_content:b83fee1c-954c-46b9-aaf9-acbf02e938d8'
+  label: 'Servicio bloque 2'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

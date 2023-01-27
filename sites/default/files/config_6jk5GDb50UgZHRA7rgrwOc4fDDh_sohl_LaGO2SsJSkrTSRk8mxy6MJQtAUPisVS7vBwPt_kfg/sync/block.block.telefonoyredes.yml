@@ -1,0 +1,25 @@
+uuid: 99b89635-36f3-4c33-a3ee-6423e2f490ed
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f7807cd3-b25f-4250-8d52-c5090047a65b'
+  module:
+    - block_content
+  theme:
+    - drudg8b3
+id: telefonoyredes
+theme: drudg8b3
+region: precontent
+weight: -19
+provider: null
+plugin: 'block_content:f7807cd3-b25f-4250-8d52-c5090047a65b'
+settings:
+  id: 'block_content:f7807cd3-b25f-4250-8d52-c5090047a65b'
+  label: 'Telefono y redes'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

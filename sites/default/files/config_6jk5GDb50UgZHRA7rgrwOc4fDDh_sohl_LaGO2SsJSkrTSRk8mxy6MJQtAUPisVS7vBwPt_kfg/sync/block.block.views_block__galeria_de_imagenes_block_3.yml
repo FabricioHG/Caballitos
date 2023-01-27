@@ -1,0 +1,32 @@
+uuid: 5d801209-97b3-4b52-979f-eab1d29835aa
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.galeria_de_imagenes
+  module:
+    - node
+    - views
+  theme:
+    - drudg8b3
+id: views_block__galeria_de_imagenes_block_3
+theme: drudg8b3
+region: content
+weight: -21
+provider: null
+plugin: 'views_block:galeria_de_imagenes-block_3'
+settings:
+  id: 'views_block:galeria_de_imagenes-block_3'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      galeria_de_imagenes: galeria_de_imagenes

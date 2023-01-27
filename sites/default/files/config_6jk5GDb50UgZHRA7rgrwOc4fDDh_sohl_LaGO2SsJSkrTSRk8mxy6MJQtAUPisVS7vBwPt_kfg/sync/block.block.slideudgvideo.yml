@@ -1,0 +1,26 @@
+uuid: 63adb717-81ff-4a55-9001-ec8f8bec4a20
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+    - udg_liston
+  theme:
+    - drudg8b3
+id: slideudgvideo
+theme: drudg8b3
+region: slideshow
+weight: -16
+provider: null
+plugin: Slide_udg
+settings:
+  id: Slide_udg
+  label: 'Slide UDG Video'
+  label_display: '0'
+  provider: udg_liston
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

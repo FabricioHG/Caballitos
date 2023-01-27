@@ -1,0 +1,20 @@
+uuid: 79a79a14-bb41-44ea-8ed8-a8b372e90ef0
+langcode: es
+status: false
+dependencies:
+  module:
+    - udg_liston
+  theme:
+    - drudg8b3
+id: listonudg
+theme: drudg8b3
+region: liston
+weight: -21
+provider: null
+plugin: liston_udg
+settings:
+  id: liston_udg
+  label: 'Liston UDG'
+  label_display: '0'
+  provider: udg_liston
+visibility: {  }

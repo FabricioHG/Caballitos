@@ -1,0 +1,36 @@
+uuid: 1d5afdab-95f3-4b72-bc64-c8ceec7da9a8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_galeria_de_video_asociada_
+  module:
+    - fieldblock
+    - node
+    - user
+  theme:
+    - drudg8b3
+id: contenidofield_2
+theme: drudg8b3
+region: sidebar_second
+weight: -17
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Galerías de video asociadas'
+  label_display: visible
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_galeria_de_video_asociada_
+  formatter_id: author
+  formatter_settings:
+    link: 1
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      noticia: noticia

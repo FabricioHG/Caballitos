@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "^1.9",
         "dompdf/dompdf": "^1.1",
+        "drupal/admin_toolbar": "^3.3",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-project-message": "^9.2",
         "drupal/core-recommended": "^9.2",
@@ -24,6 +25,7 @@
         "drupal/devel": "^4",
         "drupal/easy_breadcrumb": "^2.0",
         "drupal/phpmailer_smtp": "^2.0",
+        "drupal/quicktabs": "^3.0@alpha",
         "drupal/smtp": "^1.0",
         "drupal/token": "^1.10",
         "drupal/webform": "^6.1",
@@ -94,5 +96,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "kint-php/kint": "^5.0"
     }
 }

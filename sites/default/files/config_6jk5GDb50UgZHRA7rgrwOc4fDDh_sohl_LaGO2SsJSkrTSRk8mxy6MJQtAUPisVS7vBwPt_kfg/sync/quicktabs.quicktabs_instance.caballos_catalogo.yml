@@ -1,0 +1,111 @@
+uuid: e4ef2fd3-c891-41f7-9533-1effeb99973f
+langcode: es
+status: true
+dependencies: {  }
+id: caballos_catalogo
+label: 'Caballos Catalogo'
+renderer: quick_tabs
+hide_empty_tabs: false
+default_tab: 1
+options:
+  quick_tabs:
+    ajax: false
+    class: ''
+    style: ''
+  accordion_tabs:
+    jquery_ui:
+      collapsible: false
+      heightStyle: auto
+configuration_data:
+  -
+    title: Yegua
+    weight: 0
+    type: block_content
+    content:
+      block_content:
+        options:
+          bid: 'views_block:catalogo_caballos-block_1'
+          block_title: Yegua
+          display_title: false
+      view_content:
+        options:
+          vid: agenda_contenido_
+          display: default
+          args: ''
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: true
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: Semental
+    weight: 0
+    type: block_content
+    content:
+      block_content:
+        options:
+          bid: 'views_block:catalogo_caballos-block_2'
+          block_title: Semental
+          display_title: false
+      view_content:
+        options:
+          vid: agenda_contenido_
+          display: default
+          args: ''
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: true
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: Potro
+    weight: 0
+    type: block_content
+    content:
+      block_content:
+        options:
+          bid: 'views_block:catalogo_caballos-block_3'
+          block_title: Potro
+          display_title: false
+      view_content:
+        options:
+          vid: agenda_contenido_
+          display: default
+          args: ''
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: true
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: Potranca
+    weight: 0
+    type: block_content
+    content:
+      block_content:
+        options:
+          bid: 'views_block:catalogo_caballos-block_4'
+          block_title: Potranca
+          display_title: false
+      view_content:
+        options:
+          vid: agenda_contenido_
+          display: default
+          args: ''
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: true
+      qtabs_content:
+        options:
+          machine_name: ''

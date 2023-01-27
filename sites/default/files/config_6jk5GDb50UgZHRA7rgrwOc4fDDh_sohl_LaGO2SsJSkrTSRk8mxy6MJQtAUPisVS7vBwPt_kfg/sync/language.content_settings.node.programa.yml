@@ -1,0 +1,11 @@
+uuid: 27e736fb-a46f-4b67-8e48-0e4b015e9bdc
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.programa
+id: node.programa
+target_entity_type_id: node
+target_bundle: programa
+default_langcode: site_default
+language_alterable: false

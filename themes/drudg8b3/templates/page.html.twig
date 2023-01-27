@@ -83,35 +83,20 @@ theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clea
             </span>
           </button>
         </div>
-        <div class="align-center escudo col-sm-8">
-          <a href="http://www.udg.mx/">
-            <img alt="Universidad de Guadalajara" src="/themes/drudg8b3/images/BG_escudo-header-01.svg" class="logog">
-          </a>
-        </div>
-        <div class="escudoch col-sm-8 col-xs-8">
-          <a href="http://www.udg.mx">
-            <img alt="Universidad de Guadalajara" src="/themes/drudg8b3/images/logo_udg_web_cads.svg" class="logoch">
-          </a>
-        </div>
-        <div class="col-sm-2 col-xs-12">
-          {{ drupal_block('search_form_block') }}
-        </div>
-        <div>
-          {{ page.header }}
-        </div>
+        
+
       </div>
     </div>
+    {% if page.navigation_collapsible %}
+      <div id="navbar-collapse" class="navbar-collapse collapse">
+        {{ page.navigation_collapsible }}
+      </div>
+      {% endif %}
     </div>
     {% endif %}
   {% endblock %}
   {#% endif %#}
-	 {% if page.liston %}
-  		{% block liston %}
-  			<div id="liston" class="{{ container }}">
-    			{{ page.liston }}
-  			</div>
-  		{% endblock %}
-  	{% endif %}
+	 
  	{# precontent #}
 		{% if page.precontent %}
 		{% block precontent %}
@@ -123,9 +108,12 @@ theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clea
 		    {% endif %}
     
 		<div id="precontent" class="{{ container }}">
-		  <div class="container precontent">
+        <div class="align-center logoaqh">
+          <a href="#">
+            <img alt="Universidad de Guadalajara" src="/themes/drudg8b3/images/logoaqh.svg" class="logog">
+          </a>
+        </div>
 		    {{ page.precontent }}
-		  </div>
 		</div>
 		{% endblock %}
 	{% endif %}
@@ -138,11 +126,7 @@ theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clea
         {{ page.navigation }}
       </div>
       {# Navigation (collapsible) #}
-      {% if page.navigation_collapsible %}
-      <div id="navbar-collapse" class="navbar-collapse collapse">
-        {{ page.navigation_collapsible }}
-      </div>
-      {% endif %}
+      
       {% if not navbar_attributes.hasClass(container) %}
     </div>
     {% endif %}

@@ -1,0 +1,30 @@
+uuid: 1e5916e9-8203-401a-b18b-fca77c3c041e
+langcode: es
+status: false
+dependencies:
+  config:
+    - views.view.agenda_contenido_
+  module:
+    - system
+    - views
+  theme:
+    - drudg8b3
+id: views_block__agenda_contenido__block_1
+theme: drudg8b3
+region: content4
+weight: -19
+provider: null
+plugin: 'views_block:agenda_contenido_-block_1'
+settings:
+  id: 'views_block:agenda_contenido_-block_1'
+  label: 'Próximos Eventos'
+  label_display: visible
+  provider: views
+  views_label: 'Próximos Eventos'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

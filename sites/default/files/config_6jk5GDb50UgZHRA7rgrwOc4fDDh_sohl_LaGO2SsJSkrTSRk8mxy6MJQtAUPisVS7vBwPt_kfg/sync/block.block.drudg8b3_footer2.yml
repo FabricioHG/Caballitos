@@ -1,0 +1,25 @@
+uuid: a571b6b3-73bc-4a64-ac46-11e9f97ff8b6
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9d89430f-fa01-406b-bd91-baa8b8dcd20f'
+  module:
+    - block_content
+  theme:
+    - drudg8b3
+id: drudg8b3_footer2
+theme: drudg8b3
+region: footer
+weight: -20
+provider: null
+plugin: 'block_content:9d89430f-fa01-406b-bd91-baa8b8dcd20f'
+settings:
+  id: 'block_content:9d89430f-fa01-406b-bd91-baa8b8dcd20f'
+  label: Derechos
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

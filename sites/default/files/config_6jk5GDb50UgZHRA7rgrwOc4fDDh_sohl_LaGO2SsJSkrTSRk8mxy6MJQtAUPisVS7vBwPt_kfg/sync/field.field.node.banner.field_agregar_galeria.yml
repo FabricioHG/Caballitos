@@ -1,0 +1,29 @@
+uuid: 183d5c42-5f31-4cdb-a18b-b76d3f339ef0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agregar_galeria
+    - node.type.banner
+    - node.type.galeria_de_imagenes
+id: node.banner.field_agregar_galeria
+field_name: field_agregar_galeria
+entity_type: node
+bundle: banner
+label: 'Agregar galeria'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      galeria_de_imagenes: galeria_de_imagenes
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

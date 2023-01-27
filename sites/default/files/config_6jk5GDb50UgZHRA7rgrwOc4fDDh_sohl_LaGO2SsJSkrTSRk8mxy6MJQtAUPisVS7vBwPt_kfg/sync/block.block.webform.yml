@@ -1,0 +1,30 @@
+uuid: 8485bf0f-d33d-4e25-beda-4c55952d99cc
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - system
+    - webform
+  theme:
+    - drudg8b3
+id: webform
+theme: drudg8b3
+region: content6
+weight: -21
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Contacto
+  label_display: visible
+  provider: webform
+  webform_id: contact
+  default_data: ''
+  redirect: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

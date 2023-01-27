@@ -1,0 +1,22 @@
+uuid: 50656cc3-1b08-40d5-b9db-8dc704285a44
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drudg8b3
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: drudg8b3_messages
+theme: drudg8b3
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  label_display: '0'
+  provider: system
+visibility: {  }

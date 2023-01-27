@@ -1,0 +1,10 @@
+uuid: ffdf8106-fb30-4221-a60e-a626e9498a39
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.token
+label: Comodín
+targetEntityType: node
+cache: true

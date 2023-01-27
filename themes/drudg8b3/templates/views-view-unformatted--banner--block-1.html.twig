@@ -38,6 +38,11 @@
   <div{{ row.attributes.addClass(row_classes) }}>
     <div class="carousel-col">
       {{- row.content -}}
+      <div class="cont_rojo">
+        <a href="/node/{{ row.content['#row'].nid }}"><h1>{{row.content['#row']._entity.title[0].value}}</h1></a>
+        <p class="txt_body">{{row.content['#row']._entity.field_body[0].value}}</p> 
+      </div>
+
     </div>
   </div>
 {% endfor %}

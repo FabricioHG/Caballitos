@@ -1,0 +1,30 @@
+uuid: f6649577-799c-4f9c-826b-e843f032fb22
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:98c3ef3f-a7ec-478c-8adb-e0fec7971a1e'
+  module:
+    - block_content
+    - system
+  theme:
+    - drudg8b3
+id: servicios
+theme: drudg8b3
+region: content4
+weight: -21
+provider: null
+plugin: 'block_content:98c3ef3f-a7ec-478c-8adb-e0fec7971a1e'
+settings:
+  id: 'block_content:98c3ef3f-a7ec-478c-8adb-e0fec7971a1e'
+  label: Servicios
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,37 @@
+uuid: 373482f2-62c3-4559-9042-d9b7208545db
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_liston
+  module:
+    - entity_print
+    - fieldblock
+    - node
+  theme:
+    - drudg8b3
+id: contenidofield_3
+theme: drudg8b3
+region: slideshow
+weight: 0
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Contenido field'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_liston
+  formatter_id: entity_print_base64_image_formatter
+  formatter_settings:
+    image_style: ''
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      evento_de_agenda: evento_de_agenda
+      page: page

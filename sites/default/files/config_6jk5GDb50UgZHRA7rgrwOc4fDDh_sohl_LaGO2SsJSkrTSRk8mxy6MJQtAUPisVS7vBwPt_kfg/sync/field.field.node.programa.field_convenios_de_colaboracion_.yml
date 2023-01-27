@@ -1,0 +1,19 @@
+uuid: cb1c34e9-f704-49b4-aa62-a19156d30027
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_convenios_de_colaboracion_
+    - node.type.programa
+id: node.programa.field_convenios_de_colaboracion_
+field_name: field_convenios_de_colaboracion_
+entity_type: node
+bundle: programa
+label: 'Convenios de colaboración con otras IES'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

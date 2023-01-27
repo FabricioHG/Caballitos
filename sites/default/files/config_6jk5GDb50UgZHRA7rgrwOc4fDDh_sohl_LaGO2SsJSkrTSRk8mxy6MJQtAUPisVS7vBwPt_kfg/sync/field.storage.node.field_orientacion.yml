@@ -1,0 +1,20 @@
+uuid: 268dd0c3-01ef-421a-820e-f644338bee39
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_orientacion
+field_name: field_orientacion
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: b2b473e1-4231-40a0-a6bb-7e1c224a742a
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.eventos
+  module:
+    - system
+    - views
+  theme:
+    - drudg8b3
+id: views_block__eventos_block_1
+theme: drudg8b3
+region: content3
+weight: -23
+provider: null
+plugin: 'views_block:eventos-block_1'
+settings:
+  id: 'views_block:eventos-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

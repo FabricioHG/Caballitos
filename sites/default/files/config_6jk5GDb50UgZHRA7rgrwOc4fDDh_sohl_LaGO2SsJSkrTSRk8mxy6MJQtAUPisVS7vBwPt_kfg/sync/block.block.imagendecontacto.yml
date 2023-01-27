@@ -1,0 +1,30 @@
+uuid: 64c5b844-34ce-479f-8b82-a7795c557e19
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a0dc1959-8785-4792-bae6-66fcf69fc6bd'
+  module:
+    - block_content
+    - system
+  theme:
+    - drudg8b3
+id: imagendecontacto
+theme: drudg8b3
+region: content6
+weight: -22
+provider: null
+plugin: 'block_content:a0dc1959-8785-4792-bae6-66fcf69fc6bd'
+settings:
+  id: 'block_content:a0dc1959-8785-4792-bae6-66fcf69fc6bd'
+  label: 'Imagen de contacto'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

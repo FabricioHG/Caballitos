@@ -1,0 +1,20 @@
+uuid: 60b91369-a5db-4436-8127-7565be36d917
+langcode: es
+status: true
+dependencies:
+  module:
+    - udg_liston
+  theme:
+    - drudg8b3
+id: listondecontenido
+theme: drudg8b3
+region: precontent3
+weight: -23
+provider: null
+plugin: liston_contenido
+settings:
+  id: liston_contenido
+  label: 'Liston de contenido'
+  label_display: '0'
+  provider: udg_liston
+visibility: {  }

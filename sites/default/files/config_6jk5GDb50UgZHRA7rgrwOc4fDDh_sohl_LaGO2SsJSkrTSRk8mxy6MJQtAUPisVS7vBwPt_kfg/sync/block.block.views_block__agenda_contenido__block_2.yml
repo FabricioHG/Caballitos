@@ -1,0 +1,33 @@
+uuid: ec0f2760-06ad-4409-a51e-8752c1a5f358
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.agenda_contenido_
+  module:
+    - node
+    - views
+  theme:
+    - drudg8b3
+id: views_block__agenda_contenido__block_2
+theme: drudg8b3
+region: content
+weight: -18
+provider: null
+plugin: 'views_block:agenda_contenido_-block_2'
+settings:
+  id: 'views_block:agenda_contenido_-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      evento_de_agenda: evento_de_agenda

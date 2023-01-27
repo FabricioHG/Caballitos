@@ -1,0 +1,30 @@
+uuid: 650d207e-804b-480c-ba63-8346592fd5a9
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ea21a87a-81b2-4be8-b149-a493a2f1b30c'
+  module:
+    - block_content
+    - system
+  theme:
+    - drudg8b3
+id: logoytexto
+theme: drudg8b3
+region: precontent3
+weight: -21
+provider: null
+plugin: 'block_content:ea21a87a-81b2-4be8-b149-a493a2f1b30c'
+settings:
+  id: 'block_content:ea21a87a-81b2-4be8-b149-a493a2f1b30c'
+  label: 'logo y texto'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

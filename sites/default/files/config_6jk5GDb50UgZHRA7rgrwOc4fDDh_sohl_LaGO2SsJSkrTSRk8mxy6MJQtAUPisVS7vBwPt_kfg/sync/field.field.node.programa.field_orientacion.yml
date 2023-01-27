@@ -1,0 +1,29 @@
+uuid: a8fc2c99-64e0-4666-a126-5fb8c13baa36
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orientacion
+    - node.type.programa
+    - taxonomy.vocabulary.orientacion
+id: node.programa.field_orientacion
+field_name: field_orientacion
+entity_type: node
+bundle: programa
+label: Orientación
+description: 'Orientación del Posgrado'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      orientacion: orientacion
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
