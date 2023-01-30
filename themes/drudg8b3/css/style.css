@@ -702,11 +702,13 @@ div#Anuncio1 h2{
 /*********intro*********/
 
 #precontent3{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#861716+0,000000+27 */
 background: #861716; /* Old browsers */
-background: -moz-linear-gradient(top,  #861716 0%, #000000 47%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #861716 0%,#000000 47%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #861716 0%,#000000 47%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: -moz-linear-gradient(top,  #861716 0%, #000000 27%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #861716 0%,#000000 27%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #861716 0%,#000000 27%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#861716', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
 }
 #precontent3 p{
 	color: #FFF;	
@@ -1168,6 +1170,9 @@ span.file.file--mime-application-pdf.file--application-pdf.icon-before span.file
 .tel {
   font-size: 25px;
 }
+.tel a{
+	color: #000;
+}
 .tel_redes img{
   margin-left: 15px;
 }
@@ -1556,10 +1561,13 @@ span.file.file--mime-application-pdf.file--application-pdf.icon-before span.file
 }
 .img_sementales img{
   width: 100%;
+	height: auto;
 }
 .cont_sementales {
   margin-top: 60px;
   background-color: #fff;
+	text-align: center;
+	
 }
 .cont_img_sem_ {
   flex-grow: 1;
@@ -1602,16 +1610,14 @@ span.file.file--mime-application-pdf.file--application-pdf.icon-before span.file
 .cont_tarj {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .tarjet {
   max-width: 300px;
   background-color: #fff;
-  margin-top: 20px;
 }
 .cont_img{
   width: 100%;
-  height: 220px;
   overflow: hidden;
 }
 .cont_img img{
@@ -1635,6 +1641,9 @@ span.file.file--mime-application-pdf.file--application-pdf.icon-before span.file
 }
 #block-telefonoyredes{
 	color: #000;
+}
+#block-telefonoyredes a:hover{
+	opacity: 0.5;
 }
 #block-servicios{
 	color: #000;
@@ -1735,81 +1744,31 @@ color: #fff;
 	
 }
 
+.page-node-type-banner .field--type-string{
+font-style: italic;
+color: #CBAD09;
+	font-size: 1.5em;
+}
+
 /****ANIMACION*****/
 
-@keyframes scroll-first {
-  0% {
-    transform: translatey(0px);
-    opacity: 1;
-  }
-  100% {
-    transform: translatey(100px);
-    opacity: 0.5;
-  }
+@keyframes logoMovement { 
+  0% { 
+    opacity: 0; 
+    transform: translateY(-100%); 
+  } 
+  100% { 
+    opacity: 1; 
+    transform: translateY(0%); 
+  } 
+} 
+
+.logoaqh a img { 
+  animation: logoMovement 2s ease-in-out; 
 }
 
+/****FIN de ANIMACION*****/
 
-@keyframes scroll-second {
-  0% {
-    transform: translatey(100px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translatey(-200px);
-    opacity: 1;
-  }
-}
-/****
-
-@keyframes scroll-first {
-  0% {
-    transform: translatey(0px);
-    opacity: 1;
-  }
-  100% {
-    transform: translatey(100px);
-    opacity: 0.5;
-  }
-}
-
-
-@keyframes scroll-second {
-  0% {
-    transform: translatey(100px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translatey(-200px);
-    opacity: 1;
-  }
-}
-
-.elemento {
-  animation: scroll-first 2s infinite;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-}
-
-.elemento2 {
-  animation: scroll-second 2s infinite;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-}
-
-****/
-/*************/
-
-#first-image {
-  animation: scroll-first 5s forwards;
-}
-
-#second-image {
-  animation: scroll-second 5s forwards;
-}
-.parallax:hover {
-  background-image: url("../images/events_bg2.png") #000!important;
-  transition: background-image 2s linear;
-}
 #block-drudg8b3-footer1 {
   border-right: 1px solid #fff;
 }
